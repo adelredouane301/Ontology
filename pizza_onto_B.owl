@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#"
+     xml:base="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#has_topping -->
+
+    <owl:ObjectProperty rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#has_topping">
+        <rdfs:domain rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Pizza"/>
+        <rdfs:range rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Topping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#CheeseTopping -->
+
+    <owl:Class rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#CheeseTopping">
+        <rdfs:subClassOf rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#FishTopping -->
+
+    <owl:Class rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#FishTopping">
+        <rdfs:subClassOf rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#MeatTopping -->
+
+    <owl:Class rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#MeatTopping">
+        <rdfs:subClassOf rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#NonVegetarianPizza -->
+
+    <owl:Class rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#NonVegetarianPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Pizza"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#has_topping"/>
+                                <owl:someValuesFrom rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#FishTopping"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#has_topping"/>
+                                <owl:someValuesFrom rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#MeatTopping"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Pizza -->
+
+    <owl:Class rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Pizza">
+        <owl:disjointWith rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#TomatoTopping -->
+
+    <owl:Class rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#TomatoTopping">
+        <rdfs:subClassOf rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Topping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Topping -->
+
+    <owl:Class rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Topping"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#cheesetopping1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#cheesetopping1">
+        <rdf:type rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#CheeseTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#meattopping1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#meattopping1">
+        <rdf:type rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#MeatTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#test_pizza1_owl_identifier -->
+
+    <owl:NamedIndividual rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#test_pizza1_owl_identifier">
+        <rdf:type rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Pizza"/>
+        <has_topping rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#cheesetopping1"/>
+        <has_topping rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#meattopping1"/>
+        <has_topping rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#tomatotopping1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#test_pizza2_owl_identifier -->
+
+    <owl:NamedIndividual rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#test_pizza2_owl_identifier">
+        <rdf:type rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Pizza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#test_pizza_owl_identifier -->
+
+    <owl:NamedIndividual rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#test_pizza_owl_identifier">
+        <rdf:type rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#Pizza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#tomatotopping1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#tomatotopping1">
+        <rdf:type rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#TomatoTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#CheeseTopping"/>
+            <rdf:Description rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#FishTopping"/>
+            <rdf:Description rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#MeatTopping"/>
+            <rdf:Description rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl#TomatoTopping"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
