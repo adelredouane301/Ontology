@@ -170,31 +170,10 @@
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Pizza"/>
-        <owl:Class>
-          <owl:unionOf rdf:parseType="Collection">
-            <owl:Restriction>
-              <owl:onProperty rdf:resource="#has_topping"/>
-              <owl:someValuesFrom rdf:resource="#MeatTopping"/>
-            </owl:Restriction>
-            <owl:Restriction>
-              <owl:onProperty rdf:resource="#has_topping"/>
-              <owl:someValuesFrom rdf:resource="#FishTopping"/>
-            </owl:Restriction>
-          </owl:unionOf>
-        </owl:Class>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <Pizza rdf:about="#test_pizza_owl_identifier">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Pizza"/>
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#Pizza"/>
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -215,24 +194,10 @@
   <rdf:type rdf:resource="#Pizza"/>
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#Pizza"/>
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Pizza"/>
-  <has_topping rdf:resource="#meattopping8"/>
-  <has_topping rdf:resource="#cheesetopping8"/>
-  <has_topping rdf:resource="#tomatotopping8"/>
+  <has_topping rdf:resource="#meattopping7"/>
+  <has_topping rdf:resource="#tomatotopping7"/>
+  <has_topping rdf:resource="#cheesetopping7"/>
 </Pizza>
-
-<MeatTopping rdf:about="#meattopping7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</MeatTopping>
-
-<TomatoTopping rdf:about="#tomatotopping7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</TomatoTopping>
-
-<CheeseTopping rdf:about="#cheesetopping7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</CheeseTopping>
 
 <MeatTopping rdf:about="#meattopping5">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -260,8 +225,6 @@
 
 <Pizza rdf:about="#test_pizza2_owl_identifier">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#Pizza"/>
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#Pizza"/>
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -321,38 +284,44 @@
 </MeatTopping>
 
 <owl:Class rdf:about="#ISBN">
-  <rdfs:subClassOf rdf:resource="#Book"/>
+  <rdfs:subClassOf rdf:resource="#Pizza"/>
+  <owl:equivalentClass rdf:resource="#Pizza"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Store">
   <rdfs:subClassOf rdf:resource="#Pizza"/>
+  <owl:equivalentClass rdf:resource="#Pizza"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Title">
-  <rdfs:subClassOf rdf:resource="#Book"/>
+  <rdfs:subClassOf rdf:resource="#Pizza"/>
+  <owl:equivalentClass rdf:resource="#Pizza"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Bicycle">
-  <rdfs:subClassOf rdf:resource="#Store"/>
+  <rdfs:subClassOf rdf:resource="#Pizza"/>
+  <owl:equivalentClass rdf:resource="#Pizza"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Book">
-  <rdfs:subClassOf rdf:resource="#Store"/>
+  <rdfs:subClassOf rdf:resource="#Pizza"/>
+  <owl:equivalentClass rdf:resource="#Pizza"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Author">
-	  <rdfs:subClassOf rdf:resource="#Book"/>
+  <rdfs:subClassOf rdf:resource="#Pizza"/>
+  <owl:equivalentClass rdf:resource="#Pizza"/>
 </owl:Class>
 
-<CheeseTopping rdf:about="#cheesetopping8">
+<CheeseTopping rdf:about="#cheesetopping7">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </CheeseTopping>
 
-<TomatoTopping rdf:about="#tomatotopping8">
+<TomatoTopping rdf:about="#tomatotopping7">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </TomatoTopping>
 
-<MeatTopping rdf:about="#meattopping8">
+<MeatTopping rdf:about="#meattopping7">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </MeatTopping>
 
